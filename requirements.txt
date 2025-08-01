@@ -1,0 +1,7 @@
+# requirements.txt
+
+Flask
+Flask-CORS
+google-generativeai
+python-dotenv
+PyPDF2
