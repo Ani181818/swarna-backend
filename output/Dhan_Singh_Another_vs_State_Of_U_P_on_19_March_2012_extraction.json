@@ -1,0 +1,219 @@
+{
+    "extracted_instances": [
+        {
+            "id": "CourtCase_ST_No_85_2004",
+            "classes": [
+                "CourtCase"
+            ],
+            "properties": {
+                "hasCaseNumber": "85 of 2004",
+                "hasStatus": "closed",
+                "hasJudgementDetails": "Appellants convicted under Section 304-B (2), 498A IPC and 4 D.P. Act. Sentences imposed: ten years R.I. for 304-B, two years R.I. with Rs. 5000/- fine for 498A, and one year R.I. with fine of 2500/= for the last charge.",
+                "filedOn": "2.4.2004",
+                "followsLaw": [
+                    "IPCsection498A",
+                    "IPCsection_304B"
+                ]
+            }
+        },
+        {
+            "id": "Accused_DhanSingh",
+            "classes": [
+                "Groom'sFamilyMember",
+                "Accused"
+            ],
+            "properties": {
+                "hasName": "Dhan Singh",
+                "isAccusedOf": [
+                    "CourtCase_ST_No_85_2004"
+                ],
+                "hasRelationShipToVictim": "father-in-law"
+            }
+        },
+        {
+            "id": "Accused_Makkhan",
+            "classes": [
+                "Groom'sFamilyMember",
+                "Accused"
+            ],
+            "properties": {
+                "hasName": "Makkhan",
+                "isAccusedOf": [
+                    "CourtCase_ST_No_85_2004"
+                ],
+                "hasRelationShipToVictim": "mother-in-law"
+            }
+        },
+        {
+            "id": "Accused_AkhileshKumar",
+            "classes": [
+                "Groom",
+                "Accused"
+            ],
+            "properties": {
+                "hasName": "Akhilesh Kumar",
+                "isAccusedOf": [
+                    "CourtCase_ST_No_85_2004"
+                ],
+                "hasRelationShipToVictim": "husband"
+            }
+        },
+        {
+            "id": "Victim_Geeta",
+            "classes": [
+                "Bride",
+                "Victim"
+            ],
+            "properties": {
+                "hasName": "Geeta",
+                "hasAge": "22",
+                "isAssociatedWith": [
+                    "CourtCase_ST_No_85_2004"
+                ],
+                "isRelatedTo": [
+                    "Accused_DhanSingh",
+                    "Accused_Makkhan",
+                    "Accused_AkhileshKumar"
+                ]
+            }
+        },
+        {
+            "id": "Event_Marriage_GeetaAkhilesh",
+            "classes": [
+                "MarriageCeremony",
+                "Event"
+            ],
+            "properties": {
+                "OccuredOn": "6.12.2001",
+                "involves": [
+                    "Victim_Geeta",
+                    "Accused_AkhileshKumar"
+                ],
+                "hasDetail": "Marriage solemnised according to Hindu marriage ceremonies"
+            }
+        },
+        {
+            "id": "Law_IPC_304B",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasCaseNumber": "304-B",
+                "hasPunishment": "ten years R.I.",
+                "hasSeverity": "high"
+            }
+        },
+        {
+            "id": "Law_IPC_498A",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasCaseNumber": "498A",
+                "hasPunishment": "two years R.I. with Rs. 5000/- fine",
+                "hasSeverity": "medium"
+            }
+        },
+        {
+            "id": "Location_JhansiCourt",
+            "classes": [
+                "Court"
+            ],
+            "properties": {
+                "hasName": "Additional Session's Judge, court no.2, Jhansi",
+                "isJudgedIn": [
+                    "CourtCase_ST_No_85_2004"
+                ]
+            }
+        },
+        {
+            "id": "Location_BaruwaSagarPoliceStation",
+            "classes": [
+                "PoliceStation"
+            ],
+            "properties": {
+                "hasName": "Baruwa Sagar",
+                "isFiledIn": [
+                    "FIR_CrimeNo_505_2003"
+                ]
+            }
+        },
+        {
+            "id": "FIR_CrimeNo_505_2003",
+            "classes": [
+                "FIR"
+            ],
+            "properties": {
+                "hasCaseNumber": "505 of 2003",
+                "filedOn": "23.11.2003",
+                "hasFilingOfficer": "P. K. Chaturvedi",
+                "isFiledIn": [
+                    "Location_BaruwaSagarPoliceStation"
+                ],
+                "isPartOfCase": [
+                    "CourtCase_ST_No_85_2004"
+                ]
+            }
+        },
+        {
+            "id": "Evidence_PostMortemReport",
+            "classes": [
+                "post-mortem-report",
+                "Evidence"
+            ],
+            "properties": {
+                "hasDescription": "Cause of death: asphyxia due to anti-mortem strangulation. Ligature mark on neck, fractured hyoid bone, congestion of lungs, oesophagus, pleura etc. Viscera preserved for chemical analysis.",
+                "hasSubmissionDate": "24.11.2003",
+                "isPartOfCase": [
+                    "CourtCase_ST_No_85_2004"
+                ],
+                "isEvidenceFor": [
+                    "Law_IPC_304B"
+                ],
+                "hasLocation": [
+                    "Location_JhansiCourt"
+                ],
+                "wasCreatedBy": [
+                    "Dr. V.V. Arya"
+                ]
+            }
+        },
+        {
+            "id": "Evidence_MarriageInvitationCard",
+            "classes": [
+                "Evidence"
+            ],
+            "properties": {
+                "hasStatusOfEvidence": "seized",
+                "isPartOfCase": [
+                    "CourtCase_ST_No_85_2004"
+                ]
+            }
+        },
+        {
+            "id": "Evidence_MarriagePhotographs",
+            "classes": [
+                "Evidence"
+            ],
+            "properties": {
+                "hasStatusOfEvidence": "seized",
+                "isPartOfCase": [
+                    "CourtCase_ST_No_85_2004"
+                ]
+            }
+        },
+        {
+            "id": "DowryItems_Motorcycle",
+            "classes": [
+                "DowryItems"
+            ],
+            "properties": {
+                "hasDescription": "Motorcycle",
+                "hasMonetaryValue": "40000",
+                "wasExchangedIn": [
+                    "Event_Marriage_GeetaAkhilesh"
+                ]
+            }
+        }
+    ]
+}

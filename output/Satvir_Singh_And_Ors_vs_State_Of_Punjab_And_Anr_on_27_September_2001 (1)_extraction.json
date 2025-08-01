@@ -1,0 +1,253 @@
+{
+    "extracted_instances": [
+        {
+            "id": "CourtCase_Appeal_1319_1998",
+            "classes": [
+                "CourtCase"
+            ],
+            "properties": {
+                "hasCaseNumber": "1319 of 1998",
+                "filedOn": "27/09/2001",
+                "hasJudgementDetails": "The findings made by the Sessions Court were concurred with by the High Court. However, an alteration was made by substituting Section 306 IPC with Section 304B IPC to be read with Section 116 IPC.Commensurate alteration was made in the quantum of sentence by escalating it to RI for five years each.",
+                "hasStatus": "disposed of",
+                "followsLaw": [
+                    "IPCsection498A",
+                    "IPCsection306",
+                    "IPCsection304B",
+                    "IPCsection116"
+                ]
+            }
+        },
+        {
+            "id": "CourtCase_Appeal_123_1999",
+            "classes": [
+                "CourtCase"
+            ],
+            "properties": {
+                "hasCaseNumber": "123 of 1999",
+                "filedOn": "27/09/2001",
+                "hasJudgementDetails": "The findings made by the Sessions Court were concurred with by the High Court. However, an alteration was made by substituting Section 306 IPC with Section 304B IPC to be read with Section 116 IPC.Commensurate alteration was made in the quantum of sentence by escalating it to RI for five years each.",
+                "hasStatus": "disposed of",
+                "followsLaw": [
+                    "IPCsection498A",
+                    "IPCsection306",
+                    "IPCsection304B",
+                    "IPCsection116"
+                ]
+            }
+        },
+        {
+            "id": "Person_TejinderPalKaur",
+            "classes": [
+                "Victim",
+                "Bride"
+            ],
+            "properties": {
+                "hasName": "Tejinder Pal Kaur",
+                "hasAge": "young mother of two kids, who is a double graduate",
+                "hasGender": "female",
+                "isRelatedTo": [
+                    "Person_NarenderSingh",
+                    "Person_SatvirSingh",
+                    "Person_DevinderSingh",
+                    "Person_ParamjitKaur"
+                ],
+                "isAssociatedWith": [
+                    "CourtCase_Appeal_1319_1998",
+                    "CourtCase_Appeal_123_1999"
+                ],
+                "RepresentedBy": null
+            }
+        },
+        {
+            "id": "Person_SatvirSingh",
+            "classes": [
+                "Accused",
+                "Groom"
+            ],
+            "properties": {
+                "hasName": "Satvir Singh",
+                "hasGender": "male",
+                "isRelatedTo": [
+                    "Person_DevinderSingh",
+                    "Person_ParamjitKaur"
+                ],
+                "isAccusedOf": [
+                    "IPCsection498A",
+                    "IPCsection306",
+                    "IPCsection304B"
+                ],
+                "hasRoleInCase": "Accused",
+                "isAssociatedWith": [
+                    "CourtCase_Appeal_1319_1998",
+                    "CourtCase_Appeal_123_1999"
+                ],
+                "RepresentedBy": null
+            }
+        },
+        {
+            "id": "Person_DevinderSingh",
+            "classes": [
+                "Accused",
+                "Groom'sFamilyMember",
+                "Father"
+            ],
+            "properties": {
+                "hasName": "Devinder Singh",
+                "hasGender": "male",
+                "isRelatedTo": [
+                    "Person_SatvirSingh",
+                    "Person_ParamjitKaur"
+                ],
+                "isAccusedOf": [
+                    "IPCsection498A",
+                    "IPCsection306",
+                    "IPCsection304B"
+                ],
+                "hasRoleInCase": "Accused",
+                "isAssociatedWith": [
+                    "CourtCase_Appeal_1319_1998",
+                    "CourtCase_Appeal_123_1999"
+                ],
+                "RepresentedBy": null
+            }
+        },
+        {
+            "id": "Person_ParamjitKaur",
+            "classes": [
+                "Accused",
+                "Groom'sFamilyMember",
+                "Mother"
+            ],
+            "properties": {
+                "hasName": "Paramjit Kaur",
+                "hasGender": "female",
+                "isRelatedTo": [
+                    "Person_SatvirSingh",
+                    "Person_DevinderSingh"
+                ],
+                "isAccusedOf": [
+                    "IPCsection498A",
+                    "IPCsection306",
+                    "IPCsection304B"
+                ],
+                "hasRoleInCase": "Accused",
+                "isAssociatedWith": [
+                    "CourtCase_Appeal_1319_1998",
+                    "CourtCase_Appeal_123_1999"
+                ],
+                "RepresentedBy": null
+            }
+        },
+        {
+            "id": "Person_NarenderSingh",
+            "classes": [
+                "Bride'sFamilyMember",
+                "Father"
+            ],
+            "properties": {
+                "hasName": "Narender Singh",
+                "hasGender": "male",
+                "isRelatedTo": [
+                    "Person_TejinderPalKaur"
+                ],
+                "hasRoleInCase": "Witness",
+                "hasRelationShipToVictim": "father",
+                "isAssociatedWith": [
+                    "CourtCase_Appeal_1319_1998",
+                    "CourtCase_Appeal_123_1999"
+                ],
+                "RepresentedBy": null
+            }
+        },
+        {
+            "id": "Law_IPCsection306",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasName": "306 IPC",
+                "hasPunishment": "rigorous imprisonment for two and a half years and a fine of Rs.10,000/- each",
+                "hasSeverity": null
+            }
+        },
+        {
+            "id": "Law_IPCsection498A",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasName": "498A",
+                "hasPunishment": "imprisonment for two years and a fine of Rs.5,000/- each",
+                "hasSeverity": null
+            }
+        },
+        {
+            "id": "Law_IPCsection304B",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasName": "304B IPC",
+                "hasPunishment": "RI for five years each",
+                "hasSeverity": null
+            }
+        },
+        {
+            "id": "Law_IPCsection116",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasName": "116 IPC",
+                "hasPunishment": null,
+                "hasSeverity": null
+            }
+        },
+        {
+            "id": "Event_Marriage_TejinderSatvir",
+            "classes": [
+                "MarriageCeremony",
+                "Event"
+            ],
+            "properties": {
+                "OccuredOn": "15.11.1992",
+                "involves": [
+                    "Person_TejinderPalKaur",
+                    "Person_SatvirSingh"
+                ],
+                "hasDetail": "On 15.11.1992 she was given in marriage to Satvir Singh (A-1), a businessman, and thenceforth she was living in her husbands house."
+            }
+        },
+        {
+            "id": "Event_SuicideAttempt_Tejinder",
+            "classes": [
+                "Event"
+            ],
+            "properties": {
+                "OccuredOn": "17.6.1996",
+                "hasStartTime": "4 A.M.",
+                "hasDetail": "Tejinder Pal Kaur (PW-5) ran into the rail in front of a running train to end her life as well as her miseries once and for all.",
+                "involves": [
+                    "Person_TejinderPalKaur"
+                ],
+                "hasLocation": null,
+                "leadsTo": null
+            }
+        },
+        {
+            "id": "DowryItems",
+            "classes": [
+                "DowryItems"
+            ],
+            "properties": {
+                "hasMonetaryValue": "20000",
+                "hasDescription": "car and a house",
+                "ContainsItems": null,
+                "wasExchangedIn": [
+                    "Event_Marriage_TejinderSatvir"
+                ]
+            }
+        }
+    ]
+}
