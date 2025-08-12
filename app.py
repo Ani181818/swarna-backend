@@ -13,8 +13,8 @@ CORS(app)
 
 load_dotenv()
 
-ONTOLOGY_FILE = 'D:/DowryProject/dowryONTO_updated.rdf'
-PROMPT_FILE = 'D:/DowryProject/code.txt'
+ONTOLOGY_FILE = os.path.join(os.path.dirname(__file__), 'dowryONTO_updated.rdf')
+PROMPT_FILE = os.path.join(os.path.dirname(__file__), 'code.txt')
 OUTPUT_DIR = 'output'
 
 try:

@@ -1,0 +1,169 @@
+{
+    "extracted_instances": [
+        {
+            "id": "Accused_Kailash",
+            "classes": [
+                "Groom",
+                "Accused"
+            ],
+            "properties": {
+                "hasName": "Kailash",
+                "isAccusedOf": [
+                    "IPCsection498A",
+                    "IPCsection_304B"
+                ],
+                "RepresentedBy": null
+            }
+        },
+        {
+            "id": "Accused_Baliram",
+            "classes": [
+                "Father",
+                "Groom'sFamilyMember",
+                "Accused"
+            ],
+            "properties": {
+                "hasName": "Baliram",
+                "isAccusedOf": [
+                    "IPCsection498A",
+                    "IPCsection_304B"
+                ],
+                "RepresentedBy": null
+            }
+        },
+        {
+            "id": "Accused_MotherInLaw",
+            "classes": [
+                "Groom'sFamilyMember",
+                "Accused"
+            ],
+            "properties": {
+                "hasName": null,
+                "isAccusedOf": [
+                    "IPCsection498A",
+                    "IPCsection_304B"
+                ],
+                "RepresentedBy": null
+            }
+        },
+        {
+            "id": "Accused_Kondba",
+            "classes": [
+                "Siblings",
+                "Groom'sFamilyMember",
+                "Accused"
+            ],
+            "properties": {
+                "hasName": "Kondba Baliram Pawar",
+                "isAccusedOf": [
+                    "IPCsection498A",
+                    "IPCsection_304B"
+                ],
+                "RepresentedBy": null
+            }
+        },
+        {
+            "id": "Victim_Sangita",
+            "classes": [
+                "Bride",
+                "Victim"
+            ],
+            "properties": {
+                "hasName": "Sangita",
+                "hasAge": null,
+                "isRelatedTo": [
+                    "Accused_Kailash"
+                ],
+                "belongsTo": [
+                    "Accused_Kailash",
+                    "Accused_Baliram",
+                    "Accused_MotherInLaw",
+                    "Accused_Kondba"
+                ],
+                "investigatedBy": null,
+                "mediatedBy": null
+            }
+        },
+        {
+            "id": "Victim_Laxman",
+            "classes": [
+                "Bride'sFather",
+                "Bride'sFamilyMember",
+                "Victim"
+            ],
+            "properties": {
+                "hasName": "Laxman Kisan Solanke",
+                "hasRelationShipToVictim": "father",
+                "isRelatedTo": [
+                    "Victim_Sangita"
+                ],
+                "belongsTo": null,
+                "investigatedBy": null,
+                "mediatedBy": null
+            }
+        },
+        {
+            "id": "Law_IPC_498A",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasName": "498-A",
+                "hasPunishment": "three years rigorous imprisonment and Rs. 2000/- fine",
+                "hasSeverity": null,
+                "isEvidenceFor": null,
+                "isAssociatedWith": null
+            }
+        },
+        {
+            "id": "Law_IPC_304B",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasName": "304-B",
+                "hasPunishment": "seven years rigorous imprisonment and Rs. 5,000/- fine",
+                "hasSeverity": null,
+                "isEvidenceFor": null,
+                "isAssociatedWith": null
+            }
+        },
+        {
+            "id": "Event_Marriage_SangitaKailash",
+            "classes": [
+                "MarriageCeremony",
+                "Event"
+            ],
+            "properties": {
+                "OccuredOn": "1990",
+                "hasDetail": null,
+                "hasStartTime": null,
+                "hasEndTime": null,
+                "involves": [
+                    "Accused_Kailash",
+                    "Victim_Sangita"
+                ],
+                "leadsTo": null,
+                "wasExchangedIn": null
+            }
+        },
+        {
+            "id": "CourtCase_84_93",
+            "classes": [
+                "CourtCase"
+            ],
+            "properties": {
+                "hasCaseNumber": "84/93",
+                "filedOn": null,
+                "hasJudgementDetails": null,
+                "hasStatus": null,
+                "followsLaw": [
+                    "Law_IPC_498A",
+                    "Law_IPC_304B"
+                ],
+                "isJudgedIn": null,
+                "isPartOfCase": null
+            }
+        }
+    ]
+}
