@@ -17,6 +17,8 @@ ONTOLOGY_FILE = os.path.join(os.path.dirname(__file__), 'dowryONTO_updated.rdf')
 PROMPT_FILE = os.path.join(os.path.dirname(__file__), 'code.txt')
 OUTPUT_DIR = 'output'
 
+
+
 try:
     GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
     if not GOOGLE_API_KEY:
@@ -29,7 +31,13 @@ except Exception as e:
     print(f"An unexpected error occurred during Gemini configuration: {e}")
     exit()
 
-MODEL_NAME = 'gemini-1.5-flash'
+# app.py
+
+# OLD LINE:
+# MODEL_NAME = 'gemini-1.5-flash'
+
+# NEW LINE (Choose one from your list):
+MODEL_NAME = 'gemini-2.5-flash'
 generation_config = genai.types.GenerationConfig(
     response_mime_type="application/json",
     temperature=0.2
@@ -153,42 +161,45 @@ def extract_concepts_with_gemini(document_text, ontology_text, prompt_template):
 
 @app.route('/summary', methods=['POST'])
 def handle_extraction():
-    print("\nReceived request on /extract")
+    print("\n--- Received request on /summary ---")
 
+    # 1. Check File Upload
     if 'file' not in request.files:
-        print("Error: No file part in the request")
+        print("Error: No file part")
         return jsonify({"error": "No file part in the request"}), 400
-
+    
     file = request.files['file']
-
     if file.filename == '':
         print("Error: No selected file")
         return jsonify({"error": "No selected file"}), 400
 
-    if not file.filename.lower().endswith('.pdf'):
-        print(f"Error: Invalid file type uploaded: {file.filename}")
-        return jsonify({"error": "Invalid file type. Please upload a PDF."}), 400
-
-    print(f"Reading ontology from: {ONTOLOGY_FILE}")
+    # 2. Check Helper Files
+    print(f"1. Reading Ontology: {ONTOLOGY_FILE}")
     ontology_content = read_file(ONTOLOGY_FILE)
-    print(f"Reading prompt template from: {PROMPT_FILE}")
+    
+    print(f"2. Reading Prompt: {PROMPT_FILE}")
     prompt_template_content = read_file(PROMPT_FILE)
 
-    if ontology_content is None or prompt_template_content is None:
-        print("Error: Server configuration issue (ontology or prompt not found)")
-        return jsonify({"error": "Server configuration error reading ontology or prompt."}), 500
+    if ontology_content is None:
+        err_msg = f"Server Error: Could not find ontology file at {ONTOLOGY_FILE}"
+        print(err_msg)
+        return jsonify({"error": err_msg}), 500
+        
+    if prompt_template_content is None:
+        err_msg = f"Server Error: Could not find prompt file at {PROMPT_FILE}"
+        print(err_msg)
+        return jsonify({"error": err_msg}), 500
 
-    print(f"Extracting text from PDF: {file.filename}")
+    # 3. Extract PDF Text
+    print(f"3. Extracting text from: {file.filename}")
     pdf_text = extract_text_from_pdf(io.BytesIO(file.read()))
 
-    if pdf_text is None:
-        print("Error: Failed to extract text from PDF.")
-        return jsonify({"error": "Failed to extract text from the PDF file. It might be invalid, corrupted, or image-based."}), 400
-    if not pdf_text.strip():
-        print("Warning: Extracted text from PDF is empty.")
+    if not pdf_text or not pdf_text.strip():
+        print("Error: PDF text extraction failed or resulted in empty text.")
+        return jsonify({"error": "PDF is empty or text could not be extracted (scanned image?)."}), 400
 
-    print(f"Successfully extracted {len(pdf_text)} characters from PDF.")
-
+    # 4. Call Gemini
+    print("4. Sending to Gemini...")
     extracted_data = extract_concepts_with_gemini(
         pdf_text,
         ontology_content,
@@ -196,14 +207,15 @@ def handle_extraction():
     )
 
     if extracted_data is not None:
-        print("Extraction successful. Returning JSON data.")
+        print("Success: Data extracted.")
+        # Save backup
         save_output(f"{os.path.splitext(file.filename)[0]}_extraction.json", extracted_data, OUTPUT_DIR)
         return jsonify(extracted_data), 200
     else:
-        print("Extraction failed.")
-        return jsonify({"error": "Failed to extract information using the AI model."}), 500
-
+        # If we get here, Gemini failed. Check console for "Error initializing Gemini" or "JSONDecodeError"
+        print("Error: Gemini returned None.")
+        return jsonify({"error": "AI Model failed to process the request. Check server logs for API errors."}), 500
 if __name__ == "__main__":
     print("Starting Flask server for extraction API...")
-    port = int(os.getenv("PORT", 8000))  # Default to 5000 if PORT not set
+    port = int(os.getenv("PORT", 5000))  # Default to 5000 if PORT not set
     app.run(host='0.0.0.0', port=port, debug=True)

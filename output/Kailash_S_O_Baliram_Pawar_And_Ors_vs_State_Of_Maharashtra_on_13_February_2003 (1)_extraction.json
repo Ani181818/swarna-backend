@@ -1,0 +1,868 @@
+{
+    "extracted_instances": [
+        {
+            "id": "Judge_RSMohite",
+            "classes": [
+                "Judge",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "R.S. Mohite"
+            }
+        },
+        {
+            "id": "Accused_Kailash",
+            "classes": [
+                "Accussed",
+                "Groom",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Kailash S/O Baliram Pawar",
+                "hasRoleInCase": "Accused No. 1",
+                "isAccusedOf": [
+                    "Law_IPC_498A",
+                    "Law_IPC_304B",
+                    "Law_IPC_34"
+                ],
+                "hasFamilyMember": [
+                    "Victim_Sangita",
+                    "Accused_Baliram",
+                    "Accused_MotherInLaw",
+                    "Accused_Kondba"
+                ]
+            }
+        },
+        {
+            "id": "Accused_Baliram",
+            "classes": [
+                "Accussed",
+                "Groom'sFamilyMember",
+                "Father",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Baliram",
+                "hasRoleInCase": "Accused No. 2",
+                "hasRelationShipToVictim": "father-in-law",
+                "isAccusedOf": [
+                    "Law_IPC_498A",
+                    "Law_IPC_304B",
+                    "Law_IPC_34"
+                ],
+                "hasFamilyMember": [
+                    "Accused_Kailash",
+                    "Accused_MotherInLaw",
+                    "Accused_Kondba"
+                ]
+            }
+        },
+        {
+            "id": "Accused_MotherInLaw",
+            "classes": [
+                "Accussed",
+                "Groom'sFamilyMember",
+                "Mother",
+                "Person"
+            ],
+            "properties": {
+                "hasRoleInCase": "Accused No. 3",
+                "hasRelationShipToVictim": "mother-in-law",
+                "isAccusedOf": [
+                    "Law_IPC_498A",
+                    "Law_IPC_304B",
+                    "Law_IPC_34"
+                ],
+                "hasFamilyMember": [
+                    "Accused_Kailash",
+                    "Accused_Baliram",
+                    "Accused_Kondba"
+                ]
+            }
+        },
+        {
+            "id": "Accused_Kondba",
+            "classes": [
+                "Accussed",
+                "Groom'sFamilyMember",
+                "Siblings",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Kondba Baliram Pawar",
+                "hasRoleInCase": "Accused No. 4",
+                "hasRelationShipToVictim": "younger brother of accused No. 1",
+                "isAccusedOf": [
+                    "Law_IPC_498A",
+                    "Law_IPC_304B",
+                    "Law_IPC_34"
+                ],
+                "hasFamilyMember": [
+                    "Accused_Kailash",
+                    "Accused_Baliram",
+                    "Accused_MotherInLaw"
+                ]
+            }
+        },
+        {
+            "id": "Victim_Sangita",
+            "classes": [
+                "Victim",
+                "Bride",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Sangita",
+                "hasFamilyMember": [
+                    "Accused_Kailash",
+                    "Victim_Laxman",
+                    "Victim_Rukhma"
+                ]
+            }
+        },
+        {
+            "id": "Victim_Laxman",
+            "classes": [
+                "Victim",
+                "Bride'sFather",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Laxman Kisan Solanke",
+                "hasRoleInCase": "P.W. 1",
+                "hasFamilyMember": [
+                    "Victim_Sangita",
+                    "Victim_Rukhma"
+                ]
+            }
+        },
+        {
+            "id": "Victim_Rukhma",
+            "classes": [
+                "Victim",
+                "Bride'sMother",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Rukhma",
+                "hasRoleInCase": "P.W. 2",
+                "hasRelationShipToVictim": "maternal grand mother of the deceased",
+                "hasFamilyMember": [
+                    "Victim_Sangita",
+                    "Victim_Laxman"
+                ]
+            }
+        },
+        {
+            "id": "Witness_VitthalPawar",
+            "classes": [
+                "Witness",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Vitthal Pawar",
+                "hasRelationShipToVictim": "accompanied Accused No. 2"
+            }
+        },
+        {
+            "id": "Witness_VitthalRathod",
+            "classes": [
+                "Witness",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Vitthal Rathod",
+                "hasStatement": "Sangita had disclosed to them that her burns were caused due to an accident and that both had in fact, in their police statement disclosed that the death was accidental and due to the flare up of the stove."
+            }
+        },
+        {
+            "id": "Witness_GovindaShinde",
+            "classes": [
+                "Witness",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Govinda Rama Shinde",
+                "hasRoleInCase": "D.W.1",
+                "hasStatement": "at the time of extinguishing fire, Sangita told him that she had been set on fire due to flare up of the stove while preparing tea."
+            }
+        },
+        {
+            "id": "Witness_Istekhar",
+            "classes": [
+                "Witness",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Istekhar",
+                "hasStatement": "Sangita had disclosed to them that her burns were caused due to an accident and that both had in fact, in their police statement disclosed that the death was accidental and due to the flare up of the stove."
+            }
+        },
+        {
+            "id": "PoliceOfficer_AbdulGaniSheikh",
+            "classes": [
+                "PoliceOfficer",
+                "Person"
+            ],
+            "properties": {
+                "hasName": "Abdul Gani Sheikh",
+                "hasRoleInCase": "P.W.3, P.S.I.",
+                "investigatedBy": [
+                    "Victim_Sangita",
+                    "Location_Bori"
+                ]
+            }
+        },
+        {
+            "id": "Law_IPC_498A",
+            "classes": [
+                "Law",
+                "IPCsection498A"
+            ],
+            "properties": {
+                "hasCaseNumber": "498-A",
+                "hasPunishment": "rigorous imprisonment for three years and to pay fine of Rs. 2000/- each and in default to suffer further rigorous imprisonment for six months"
+            }
+        },
+        {
+            "id": "Law_IPC_304B",
+            "classes": [
+                "Law",
+                "IPCsection_304B"
+            ],
+            "properties": {
+                "hasCaseNumber": "304-B",
+                "hasPunishment": "rigorous imprisonment for a period of seven years and to pay a fine of Rs. 5,000/- each and in default to suffer further rigorous imprisonment for the period of one year"
+            }
+        },
+        {
+            "id": "Law_IPC_34",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasCaseNumber": "34"
+            }
+        },
+        {
+            "id": "Law_CrPC_174",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasCaseNumber": "174"
+            }
+        },
+        {
+            "id": "Law_CrPC_294",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasCaseNumber": "294"
+            }
+        },
+        {
+            "id": "Law_IEA_113B",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasCaseNumber": "113-B",
+                "hasDate": "1872"
+            }
+        },
+        {
+            "id": "Law_DPA_1961_S2",
+            "classes": [
+                "Law",
+                "DowryProhibitionACT"
+            ],
+            "properties": {
+                "hasCaseNumber": "2",
+                "hasDate": "1961"
+            }
+        },
+        {
+            "id": "Law_DPA_1961_S4",
+            "classes": [
+                "Law",
+                "DowryProhibitionACT"
+            ],
+            "properties": {
+                "hasCaseNumber": "4",
+                "hasDate": "1961"
+            }
+        },
+        {
+            "id": "Law_IPC_306",
+            "classes": [
+                "Law"
+            ],
+            "properties": {
+                "hasCaseNumber": "306"
+            }
+        },
+        {
+            "id": "Event_Marriage_SangitaKailash",
+            "classes": [
+                "MarriageCeremony",
+                "Event"
+            ],
+            "properties": {
+                "OccuredOn": "1990-01-01T00:00:00Z",
+                "involves": [
+                    "Victim_Sangita",
+                    "Accused_Kailash"
+                ]
+            }
+        },
+        {
+            "id": "Event_DemandWeldingMachine",
+            "classes": [
+                "DowryDemand",
+                "DemandDowry",
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "demand for a welding machine",
+                "involves": [
+                    "Accused_Kailash",
+                    "Victim_Sangita",
+                    "Victim_Laxman"
+                ],
+                "leadsTo": "Event_PurchaseWeldingMachine"
+            }
+        },
+        {
+            "id": "Event_PurchaseWeldingMachine",
+            "classes": [
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "father purchased the welding machine and gave the same to accused No. 1",
+                "involves": [
+                    "Victim_Laxman",
+                    "Accused_Kailash"
+                ],
+                "hasLocation": "Location_Ambhora"
+            }
+        },
+        {
+            "id": "Event_DemandCash2000",
+            "classes": [
+                "DowryDemand",
+                "DemandDowry",
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "demand for Rs. 2,000/-",
+                "involves": [
+                    "Accused_Kailash",
+                    "Victim_Sangita",
+                    "Victim_Laxman"
+                ]
+            }
+        },
+        {
+            "id": "Event_Harassment_General",
+            "classes": [
+                "Harassment",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "Sangita was being harassed by her family members on account of non-payment of money and she used to be abused in filthy language.",
+                "involves": [
+                    "Victim_Sangita",
+                    "Accused_Kailash",
+                    "Accused_Baliram",
+                    "Accused_MotherInLaw",
+                    "Accused_Kondba"
+                ]
+            }
+        },
+        {
+            "id": "Event_Harassment_Specific_Kailash",
+            "classes": [
+                "Harassment",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "accused No. 1 was making unlawful demands relating to property",
+                "involves": [
+                    "Victim_Sangita",
+                    "Accused_Kailash"
+                ]
+            }
+        },
+        {
+            "id": "Event_Death_Sangita",
+            "classes": [
+                "Death",
+                "Bride'sDeath",
+                "Event"
+            ],
+            "properties": {
+                "OccuredOn": "1993-03-30T00:00:00Z",
+                "hasDetail": "suffered 80% burn injury, died next day morning",
+                "involves": [
+                    "Victim_Sangita"
+                ],
+                "hasLocation": "Location_GovtHospital"
+            }
+        },
+        {
+            "id": "Event_Funeral_Sangita",
+            "classes": [
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "The accused took away the dead body of Sangita and performed the funeral",
+                "involves": [
+                    "Victim_Sangita",
+                    "Accused_Kailash",
+                    "Accused_Baliram",
+                    "Accused_MotherInLaw",
+                    "Accused_Kondba"
+                ],
+                "hasLocation": "Location_Bori"
+            }
+        },
+        {
+            "id": "Event_FIR_AccidentalDeath",
+            "classes": [
+                "FileFIR/Complaint",
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "F.LR. of accidental death No. 7/93 was registered",
+                "OccuredOn": "1993-03-31T00:00:00Z",
+                "involves": [
+                    "Victim_Sangita"
+                ],
+                "isFiledIn": "Location_PoliceStation_Pusad"
+            }
+        },
+        {
+            "id": "Event_FIR_PW3",
+            "classes": [
+                "FileFIR/Complaint",
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "an F.I.R. came to be lodged by P.W.3 Abdul Gani Sheikh",
+                "OccuredOn": "1993-04-02T00:00:00Z",
+                "involves": [
+                    "PoliceOfficer_AbdulGaniSheikh",
+                    "Accused_Kailash",
+                    "Accused_Baliram",
+                    "Accused_MotherInLaw",
+                    "Accused_Kondba"
+                ],
+                "isFiledIn": "Location_PoliceStation_Pusad"
+            }
+        },
+        {
+            "id": "Event_Investigation",
+            "classes": [
+                "InvestigateCrime",
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "investigation made in the accidental death case",
+                "involves": [
+                    "PoliceOfficer_AbdulGaniSheikh"
+                ]
+            }
+        },
+        {
+            "id": "Event_ChargeSheetFiling",
+            "classes": [
+                "FileChargeSheet",
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "charge sheet came to be filed",
+                "involves": [
+                    "CourtCase_SessionsTrial_84_93"
+                ]
+            }
+        },
+        {
+            "id": "Event_Trial",
+            "classes": [
+                "ConductCourtProceedings",
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "matter was committed to the Sessions Court for the trial",
+                "involves": [
+                    "CourtCase_SessionsTrial_84_93"
+                ]
+            }
+        },
+        {
+            "id": "Event_Judgment_SessionsCourt",
+            "classes": [
+                "DeliverJudgement",
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "OccuredOn": "2001-10-24T00:00:00Z",
+                "hasDetail": "judgment and order passed by the Additional Sessions Judge, Pusad",
+                "involves": [
+                    "CourtCase_SessionsTrial_84_93"
+                ]
+            }
+        },
+        {
+            "id": "Event_AppealJudgment",
+            "classes": [
+                "DeliverJudgement",
+                "Actions",
+                "Event"
+            ],
+            "properties": {
+                "OccuredOn": "2003-02-13T00:00:00Z",
+                "hasDetail": "judgment and order passed by the High Court",
+                "involves": [
+                    "CourtCase_Appeal_KailashVsMaharashtra"
+                ],
+                "hasJudgementIssuedBy": "Judge_RSMohite"
+            }
+        },
+        {
+            "id": "Event_PropertyTransaction",
+            "classes": [
+                "Agreements",
+                "Event"
+            ],
+            "properties": {
+                "hasDetail": "independent property transaction whereby accused No. 2 had sold his field to P.W.2 Rukhma",
+                "involves": [
+                    "Accused_Baliram",
+                    "Victim_Rukhma",
+                    "Victim_Laxman"
+                ]
+            }
+        },
+        {
+            "id": "CourtCase_SessionsTrial_84_93",
+            "classes": [
+                "CourtCase",
+                "LegalEntity"
+            ],
+            "properties": {
+                "hasCaseNumber": "84/93",
+                "filedOn": "1993-01-01T00:00:00Z",
+                "isJudgedIn": "Location_SessionsCourt_Pusad",
+                "followsLaw": [
+                    "Law_IPC_498A",
+                    "Law_IPC_304B",
+                    "Law_IPC_34"
+                ],
+                "hasJudgementDetails": "convicted for an offence punishable under Sections 498-A and 304-B read with Section 34 of the Indian Penal Code. Sentenced to rigorous imprisonment for three years and fine of Rs. 2000/- each for 498-A, and rigorous imprisonment for seven years and fine of Rs. 5,000/- each for 304-B."
+            }
+        },
+        {
+            "id": "CourtCase_Appeal_KailashVsMaharashtra",
+            "classes": [
+                "CourtCase",
+                "LegalEntity"
+            ],
+            "properties": {
+                "hasCaseNumber": "Kailash S/O Baliram Pawar And Ors. vs State Of Maharashtra",
+                "filedOn": "2003-02-13T00:00:00Z",
+                "isJudgedIn": "Location_HighCourt",
+                "followsLaw": [
+                    "Law_IPC_498A",
+                    "Law_IPC_304B",
+                    "Law_IPC_34",
+                    "Law_IEA_113B",
+                    "Law_DPA_1961_S2",
+                    "Law_DPA_1961_S4"
+                ],
+                "hasJudgementDetails": "Appeal partly allowed. Conviction of all accused for Section 304-B quashed. Conviction of accused Nos. 2, 3, 4 for Section 498-A quashed. Conviction of accused No. 1 Kailash for Section 498-A confirmed."
+            }
+        },
+        {
+            "id": "Location_Pusad",
+            "classes": [
+                "Location"
+            ],
+            "properties": {
+                "hasName": "Pusad"
+            }
+        },
+        {
+            "id": "Location_SessionsCourt_Pusad",
+            "classes": [
+                "Court",
+                "Location"
+            ],
+            "properties": {
+                "hasName": "Additional Sessions Judge, Pusad",
+                "hasAddress": "Pusad"
+            }
+        },
+        {
+            "id": "Location_HighCourt",
+            "classes": [
+                "Court",
+                "Location"
+            ],
+            "properties": {
+                "hasName": "High Court"
+            }
+        },
+        {
+            "id": "Location_Bori",
+            "classes": [
+                "Accused'sResidence",
+                "CrimeLocation",
+                "Location"
+            ],
+            "properties": {
+                "hasName": "village Bori",
+                "hasAddress": "village Bori"
+            }
+        },
+        {
+            "id": "Location_Ambhora",
+            "classes": [
+                "Location"
+            ],
+            "properties": {
+                "hasName": "Ambhora",
+                "hasAddress": "Ambhora"
+            }
+        },
+        {
+            "id": "Location_KaliTembhi",
+            "classes": [
+                "Location"
+            ],
+            "properties": {
+                "hasName": "Kali-Tembhi",
+                "hasAddress": "Kali-Tembhi"
+            }
+        },
+        {
+            "id": "Location_GovtHospital",
+            "classes": [
+                "Location"
+            ],
+            "properties": {
+                "hasName": "Government Hospital"
+            }
+        },
+        {
+            "id": "Location_PoliceStation_Pusad",
+            "classes": [
+                "PoliceStation",
+                "Location"
+            ],
+            "properties": {
+                "hasName": "Police Station, Pusad",
+                "hasAddress": "Pusad"
+            }
+        },
+        {
+            "id": "DowryItem_WeldingMachine",
+            "classes": [
+                "DowryItems",
+                "ElectronicGadgets",
+                "Object"
+            ],
+            "properties": {
+                "hasMonetaryValue": 2800.0,
+                "hasDescription": "welding machine",
+                "wasExchangedIn": "Event_PurchaseWeldingMachine",
+                "isPossessedBy": "Accused_Kailash"
+            }
+        },
+        {
+            "id": "DowryItem_Cash2000",
+            "classes": [
+                "DowryItems",
+                "Cash",
+                "Object"
+            ],
+            "properties": {
+                "hasMonetaryValue": 2000.0,
+                "hasDescription": "Rs. 2,000/-",
+                "wasExchangedIn": "Event_DemandCash2000"
+            }
+        },
+        {
+            "id": "Object_Stove",
+            "classes": [
+                "Object"
+            ],
+            "properties": {
+                "hasDescription": "blackened stove",
+                "hasLocation": "Location_Bori"
+            }
+        },
+        {
+            "id": "Object_PetticoatRags",
+            "classes": [
+                "Object"
+            ],
+            "properties": {
+                "hasDescription": "burnt rags of shreds of petticoat",
+                "hasLocation": "Location_Bori"
+            }
+        },
+        {
+            "id": "Object_Cup",
+            "classes": [
+                "Object"
+            ],
+            "properties": {
+                "hasDescription": "cup",
+                "hasLocation": "Location_Bori"
+            }
+        },
+        {
+            "id": "Object_GermanContainer",
+            "classes": [
+                "Object"
+            ],
+            "properties": {
+                "hasDescription": "german container in which there was water for tea",
+                "hasLocation": "Location_Bori"
+            }
+        },
+        {
+            "id": "Evidence_PostmortemReport",
+            "classes": [
+                "Evidence",
+                "post-mortem-report",
+                "Object"
+            ],
+            "properties": {
+                "isPartOfCase": "CourtCase_SessionsTrial_84_93",
+                "proves": "CourtCase_SessionsTrial_84_93",
+                "hasStatusOfEvidence": "admitted in the evidence by consent under Section 294 of the Criminal Procedure Code"
+            }
+        },
+        {
+            "id": "Evidence_OcularDocumentary",
+            "classes": [
+                "Evidence",
+                "Object"
+            ],
+            "properties": {
+                "hasDescription": "ocular and documentary evidence",
+                "isPartOfCase": "CourtCase_SessionsTrial_84_93",
+                "proves": "CourtCase_SessionsTrial_84_93"
+            }
+        },
+        {
+            "id": "Evidence_GovindaStatement",
+            "classes": [
+                "Evidence",
+                "witnessStatement",
+                "Object"
+            ],
+            "properties": {
+                "wasCreatedBy": "Witness_GovindaShinde",
+                "isPartOfCase": "CourtCase_Appeal_KailashVsMaharashtra",
+                "hasDescription": "statement of D.W.1 Govinda Rama Shinde",
+                "hasStatusOfEvidence": "reaffirmed in cross-examination, police statement recorded"
+            }
+        },
+        {
+            "id": "Evidence_VitthalRathodStatement",
+            "classes": [
+                "Evidence",
+                "witnessStatement",
+                "Object"
+            ],
+            "properties": {
+                "wasCreatedBy": "Witness_VitthalRathod",
+                "isPartOfCase": "CourtCase_Appeal_KailashVsMaharashtra",
+                "hasDescription": "statement of Vitthal Mithu Rathod",
+                "hasStatusOfEvidence": "police statement recorded"
+            }
+        },
+        {
+            "id": "Evidence_SpotPanchanama",
+            "classes": [
+                "Evidence",
+                "Object"
+            ],
+            "properties": {
+                "hasDescription": "spot panchanama",
+                "hasDate": "1993-03-31T00:00:00Z",
+                "hasLocation": "Location_Bori",
+                "isPartOfCase": "CourtCase_Appeal_KailashVsMaharashtra",
+                "proves": "CourtCase_Appeal_KailashVsMaharashtra"
+            }
+        },
+        {
+            "id": "Evidence_Soudachitthi",
+            "classes": [
+                "Evidence",
+                "Object"
+            ],
+            "properties": {
+                "hasDescription": "Soudachitthi between accused No. 2 and Rukhma",
+                "wasCreatedBy": "Victim_Laxman",
+                "isPartOfCase": "CourtCase_Appeal_KailashVsMaharashtra",
+                "proves": "CourtCase_Appeal_KailashVsMaharashtra"
+            }
+        },
+        {
+            "id": "FIR_AccidentalDeath_7_93",
+            "classes": [
+                "FIR",
+                "Complaint",
+                "LegalEntity"
+            ],
+            "properties": {
+                "hasCaseNumber": "7/93",
+                "wasRegisteredOn": "1993-03-31T00:00:00Z",
+                "isFiledIn": "Location_PoliceStation_Pusad",
+                "hasFilingOfficer": "Police Station, Pusad",
+                "hasDescription": "F.LR. of accidental death",
+                "isEvidenceFor": [
+                    "Law_CrPC_174",
+                    "Law_IPC_306",
+                    "Law_IPC_498A",
+                    "Law_IPC_34"
+                ]
+            }
+        },
+        {
+            "id": "FIR_PW3_2_4_1993",
+            "classes": [
+                "FIR",
+                "Complaint",
+                "LegalEntity"
+            ],
+            "properties": {
+                "wasRegisteredOn": "1993-04-02T00:00:00Z",
+                "isFiledIn": "Location_PoliceStation_Pusad",
+                "hasFilingOfficer": "PoliceOfficer_AbdulGaniSheikh",
+                "hasDescription": "F.I.R. lodged by P.W.3 Abdul Gani Sheikh",
+                "isEvidenceFor": [
+                    "Law_IPC_306",
+                    "Law_IPC_498A",
+                    "Law_IPC_34"
+                ]
+            }
+        }
+    ]
+}
